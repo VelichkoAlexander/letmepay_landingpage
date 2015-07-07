@@ -1,5 +1,13 @@
 @import "../bourbon/bourbon";
-body{
-  font:17px/36px Roboto,Arial,sans-serif;
-}
+@include font-face("opensans-regular", "../fonts/OpenSans/opensans-regular");
+@include font-face("opensans-semibold", "../fonts/OpenSans/opensans-semibold");
 
+
+@include font-face("prosto", "../fonts/ProstoOne/prosto");
+
+
+
+body{
+	font-family: opensans-regular,sans-serif;
+	font-size: 16px;
+}
