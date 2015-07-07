@@ -11,11 +11,14 @@
 
         },
         setUpListeners: function () {
-            $(".menu a[href*='#'],.header__scroll,.up").mPageScroll2id();
-            $(".popup_content").magnificPopup({
-                type: 'inline',
-                midClick: true,
-                showCloseBtn: true
+
+            $("a[href*='#']").mPageScroll2id();
+            $(window).bind('scroll', function () {
+                if ($(window).scrollTop() > 50) {
+                    $('nav').addClass('navbar-fixed-top');
+                } else {
+                    $('nav').removeClass('navbar-fixed-top');
+                }
             });
             $('#about').waypoint(function (direction) {
                 if(direction == 'up'){
@@ -43,16 +46,6 @@
             $(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
             $(".right .resume_item").animated("fadeInRight", "fadeOutDown");
         },
-
-        preLoad: function () {
-            $(window).load(function () {
-                $("#loaderInner").fadeOut();
-                $("#loader").delay(400).fadeOut("slow");
-            });
-        },
-        windowHeight: function () {
-            $(".main_head").css("height", $(window).height());
-        },
         parallax: function () {
 
             var parallaxObj = $("#home");
@@ -64,26 +57,8 @@
                     "background-position": coords
                 });
             })
-        },
-        submitForm: function (e) {
-            $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-            e.preventDefault();
-            console.log($('.help-block li').length);
-            if (!($('.help-block  li').length)) {
-
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(this).serialize()
-                }).done(function () {
-                    $(this).find("input").val("");
-                    alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-                    $("#form").trigger("reset");
-                });
-            }
-
-
         }
+
 
     };
     app.initialize();

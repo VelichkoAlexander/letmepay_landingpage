@@ -8,15 +8,23 @@
 	}
 	.logoplace {
 		margin-top: 52px;
-		margin-bottom: 107px;
+		//margin-bottom: 107px;
+	}
+	.section_title{
+		margin-top: 107px;
 	}
 }
 
-.header{
-	.section_title{
-		margin-top: 224px;
+.navbar-fixed-top {
+	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	background: #000;
+	.logoplace {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 10px;
 	}
 }
+
 .logo {
 	margin-left: 31px;
 }
@@ -186,8 +194,8 @@
 
 #myTabs3 {
 	a {
-		margin-right:0;
-		margin-left:  -25px;
+		margin-right: 0;
+		margin-left: -25px;
 	}
 }
 
