@@ -6,17 +6,11 @@
 
         initialize: function () {
             this.setUpListeners();
-            //this.windowHeight();
-            this.preLoad();
             this.parallax();
 
 
         },
         setUpListeners: function () {
-            //$(window).resize(this.windowHeight());
-            //$('#portfolio_show').mixItUp();
-            //$("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
-            //$('form').on('submit', app.submitForm);
             $(".menu a[href*='#'],.header__scroll,.up").mPageScroll2id();
             $(".popup_content").magnificPopup({
                 type: 'inline',
@@ -34,12 +28,20 @@
             },{offset: '93%'});
             //animate
 
-            $(".section__title").animated("fadeInUp", "fadeOutDown");
+            $(".section_title").animated("fadeInUp", "fadeOutDown");
 
-            $('#myTabs a').click(function (e) {
-                e.preventDefault()
+            $('#myTabs,#myTabs2 a').click(function (e) {
+                e.preventDefault();
                 $(this).tab('show')
-            })
+            });
+            $(".section_img").animated("fadeInUp", "fadeOutDown");
+
+            $(".animation_1").animated("flipInY", "fadeOutDown");
+            $(".animation_2").animated("fadeInLeft", "fadeOutDown");
+            $(".animation_3").animated("fadeInRight", "fadeOutDown");
+
+            $(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
+            $(".right .resume_item").animated("fadeInRight", "fadeOutDown");
         },
 
         preLoad: function () {
