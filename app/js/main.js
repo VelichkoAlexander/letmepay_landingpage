@@ -35,6 +35,11 @@
             //animate
 
             $(".section__title").animated("fadeInUp", "fadeOutDown");
+
+            $('#myTabs a').click(function (e) {
+                e.preventDefault()
+                $(this).tab('show')
+            })
         },
 
         preLoad: function () {
@@ -80,4 +85,6 @@
 
     };
     app.initialize();
+
+
 }());

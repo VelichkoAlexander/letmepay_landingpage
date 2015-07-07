@@ -69,3 +69,54 @@
 		}
 	}
 }
+
+//SECOND SECTION
+
+.how_connect {
+	color: #050708;
+	.section_title {
+		margin-top: 113px;
+		margin-bottom: 23px;
+	}
+	.how_to{
+		text-align: center;
+		color: #c3c3c3;
+
+	}
+}
+.second_title{
+
+}
+//tabs
+.nav-tabs{
+	border: none;
+	margin-top: 50px;
+	max-width: 950px;
+
+	a{
+		color: #050708;
+		font-family: opensans-regular, sans-serif;
+		font-weight: 700;
+	}
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	border: none;
+	border-radius: 5px;
+	background-color:  #f1ebf2;
+	color: #050708;
+}
+.nav-tabs>li>a:hover{
+	border:1px solid transparent;
+	background-color:  #f1ebf2;
+	border-radius: 5px;
+}
+.nav>li>a{
+	padding: 15px 42px 12px 44px;
+}
+
+#home{
+	margin-top: 35px;
+	img{
+		display: block;
+	}
+}
