@@ -299,7 +299,9 @@ span.icon-bar {
     display: block;
     color: #ffffff;
     padding: 23px 0 29px 0;
-    margin-right: -25px; }
+    margin-right: -25px;
+    -webkit-transition: all .5s;
+            transition: all .5s; }
     .facilities a:hover {
       text-decoration: none;
       background: #de4dac; }
@@ -308,16 +310,32 @@ span.icon-bar {
       line-height: 24px;
       margin: 0;
       width: 340px;
-      margin-right: 96px;
-      margin-left: 23px; }
+      margin-right: 38px;
+      margin-left: 20px; }
     .facilities a h3 {
       text-transform: uppercase; }
 
-#myTabs3 a {
-  margin-right: 0;
-  margin-left: -25px; }
-#myTabs3 p, #myTabs3 h3 {
-  margin-left: 44px; }
+#myTabs3 {
+  margin-top: 37px;
+  margin-left: -48px; }
+  #myTabs3 a {
+    margin-left: -25px;
+    z-index: 1; }
+  #myTabs3 p, #myTabs3 h3 {
+    margin-left: 36px; }
+  #myTabs3 li.active a {
+    text-decoration: none;
+    background: #de4dac; }
+  #myTabs3 ul, #myTabs3 li {
+    list-style: none; }
+
+#myTabs2 {
+  margin-right: -20px; }
+  #myTabs2 ul, #myTabs2 li {
+    list-style: none; }
+  #myTabs2 li.active a {
+    text-decoration: none;
+    background: #de4dac; }
 
 .third_title {
   margin-top: 100px;
@@ -335,7 +353,10 @@ span.icon-bar {
   .tab-content .img_2 {
     display: block;
     margin: auto;
-    position: absolute; }
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100; }
 
 .wrapper-footer {
   color: #c4c4c4;

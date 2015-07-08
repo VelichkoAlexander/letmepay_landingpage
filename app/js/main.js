@@ -11,7 +11,11 @@
 
         },
         setUpListeners: function () {
-
+            $('.facilities_text li').on('click', function(){
+                var $this=$(this);
+                $('.facilities_text li').removeClass('active');
+                $this.addClass('active');
+            });
             $(".logo a[href*='#']").mPageScroll2id();
             $(window).bind('scroll', function () {
                 if ($(window).scrollTop() > 62) {
@@ -34,7 +38,7 @@
 
             $(".section_title").animated("fadeInUp", "fadeOutDown");
 
-            $('#myTabs,#myTabs2 a').click(function (e) {
+            $('#myTabs,#myTabs2 a,#myTabs3 a').click(function (e) {
                 e.preventDefault();
                 $(this).tab('show')
             });
