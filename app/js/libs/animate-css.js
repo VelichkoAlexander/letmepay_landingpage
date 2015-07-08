@@ -10,7 +10,7 @@
 								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
 						}
 				}, {
-						offset: "80%"
+						offset: "85%"
 				}).waypoint(function(dir) {
 						if (dir === "down") {
 								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
@@ -18,7 +18,7 @@
 								$(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
 						}
 				}, {
-						offset: -$(window).height()
+						offset: -$(window).height()-65
 				});
 		};
 })(jQuery);

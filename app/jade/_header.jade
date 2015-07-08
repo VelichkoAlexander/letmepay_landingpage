@@ -1,15 +1,24 @@
 //Header
 section.header#header
-	nav
+	nav.navbar
 		.container
 			.row.logoplace
-				.logo.pull-left
-					h1
-						a(href="#header")
-							img(src="images/first_section/logo.png" alt="letmepay logo")
-				.appstore.pull-right
-					a(href="#")
-					img(src="images/first_section/appStoreBadge.png" alt="appStoreBadge")
+
+					.logo.pull-left
+						h1
+							a(href="#header")
+								img(src="images/first_section/logo.png" alt="letmepay logo")
+					.appstore.pull-right.hidden-xs
+						a(href="#")
+						img(src="images/first_section/appStoreBadge.png" alt="appStoreBadge")
+					button.navbar-toggle.collapsed(type="button" class="" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false")
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					.appstore_toggle.nav.hidden-md.hidden-lg.hidden-sm
+						a(href="#").center-block
+							img(src="images/first_section/appStoreBadge.png" alt="appStoreBadge")
 	.container
 		.row.section_title
 			h2.small удобное приложение

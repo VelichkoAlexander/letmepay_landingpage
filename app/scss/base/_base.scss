@@ -1,3 +1,6 @@
+*{
+	outline: none;
+}
 .header {
 	color: #ffffff;
 	background: url("../images/first_section/bg.jpg");
@@ -8,16 +11,16 @@
 	}
 	.logoplace {
 		margin-top: 52px;
-		//margin-bottom: 107px;
-	}
+			}
 	.section_title{
-		margin-top: 107px;
+		margin-top: 109px;
+		transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 	}
 }
 
 .navbar-fixed-top {
 	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-	background: #000;
+	background: #5e5fb4 ;
 	.logoplace {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -34,6 +37,16 @@
 	img {
 		margin-top: 3px;
 	}
+}
+.appstore_toggle{
+	margin: 18px;
+
+}
+span.icon-bar {
+	background-color: white;
+}
+#bs-example-navbar-collapse-1,.navbar-collapse{
+	border: none;
 }
 
 .section_title {
@@ -130,7 +143,7 @@
 }
 
 .nav > li > a {
-	padding: 15px 42px 12px 44px;
+	padding: 15px 42px 12px 39px;
 }
 
 .tab-content {
@@ -181,7 +194,7 @@
 			font-size: 16px;
 			line-height: 24px;
 			margin: 0;
-			width: 306px;
+			width: 340px;
 			margin-right: 96px;
 			margin-left: 23px;
 
@@ -196,6 +209,9 @@
 	a {
 		margin-right: 0;
 		margin-left: -25px;
+	}
+	p,h3{
+		margin-left: 44px;
 	}
 }
 

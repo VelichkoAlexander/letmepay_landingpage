@@ -162,6 +162,9 @@ body {
   font-family: opensans-regular,sans-serif;
   font-size: 16px; }
 
+* {
+  outline: none; }
+
 .header {
   color: #ffffff;
   background: url("../images/first_section/bg.jpg");
@@ -172,12 +175,14 @@ body {
   .header .logoplace {
     margin-top: 52px; }
   .header .section_title {
-    margin-top: 107px; }
+    margin-top: 109px;
+    -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+            transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
 
 .navbar-fixed-top {
   -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
           transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  background: #000; }
+  background: #5e5fb4; }
   .navbar-fixed-top .logoplace {
     margin-top: 0;
     margin-bottom: 0;
@@ -190,6 +195,15 @@ body {
   margin-right: 31px; }
   .appstore img {
     margin-top: 3px; }
+
+.appstore_toggle {
+  margin: 18px; }
+
+span.icon-bar {
+  background-color: white; }
+
+#bs-example-navbar-collapse-1, .navbar-collapse {
+  border: none; }
 
 .section_title {
   text-align: center;
@@ -256,7 +270,7 @@ body {
   border-radius: 5px; }
 
 .nav > li > a {
-  padding: 15px 42px 12px 44px; }
+  padding: 15px 42px 12px 39px; }
 
 .tab-content .content_tab {
   margin-top: 40px; }
@@ -293,7 +307,7 @@ body {
       font-size: 16px;
       line-height: 24px;
       margin: 0;
-      width: 306px;
+      width: 340px;
       margin-right: 96px;
       margin-left: 23px; }
     .facilities a h3 {
@@ -302,6 +316,8 @@ body {
 #myTabs3 a {
   margin-right: 0;
   margin-left: -25px; }
+#myTabs3 p, #myTabs3 h3 {
+  margin-left: 44px; }
 
 .third_title {
   margin-top: 100px;
@@ -353,7 +369,6 @@ body {
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #666;
   min-width: 320px !important; }
 
 body input:focus:required:invalid, body textarea:focus:required:invalid {

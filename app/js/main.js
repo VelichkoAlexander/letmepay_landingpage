@@ -12,10 +12,11 @@
         },
         setUpListeners: function () {
 
-            $("a[href*='#']").mPageScroll2id();
+            $(".logo a[href*='#']").mPageScroll2id();
             $(window).bind('scroll', function () {
-                if ($(window).scrollTop() > 50) {
+                if ($(window).scrollTop() > 62) {
                     $('nav').addClass('navbar-fixed-top');
+                    $('#header .section_title').css("margin-top","161px");
                 } else {
                     $('nav').removeClass('navbar-fixed-top');
                 }
