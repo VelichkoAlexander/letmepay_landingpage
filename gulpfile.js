@@ -85,7 +85,7 @@ gulp.task('sass', function () {
         }))
 //.pipe(minifyCSS())
         .pipe(autoprefixer({
-            browsers: ['last 5 versions'],
+            browsers: ['last 2 versions', 'Firefox ESR', 'Opera 12.1'],
             cascade: true
         }))
         .pipe(gulp.dest('app/css/'))					// Директория куда скидываются готовые файлы
