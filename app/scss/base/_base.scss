@@ -1,6 +1,7 @@
-*{
+* {
 	outline: none;
 }
+
 .header {
 	color: #ffffff;
 	background: url("../images/first_section/bg.jpg");
@@ -11,8 +12,8 @@
 	}
 	.logoplace {
 		margin-top: 52px;
-			}
-	.section_title{
+	}
+	.section_title {
 		margin-top: 109px;
 		transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 	}
@@ -20,7 +21,7 @@
 
 .navbar-fixed-top {
 	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-	background: #5e5fb4 ;
+	background: #5e5fb4;
 	.logoplace {
 		margin-top: 0;
 		margin-bottom: 0;
@@ -38,14 +39,17 @@
 		margin-top: 3px;
 	}
 }
-.appstore_toggle{
+
+.appstore_toggle {
 	margin: 18px;
 
 }
+
 span.icon-bar {
 	background-color: white;
 }
-#bs-example-navbar-collapse-1,.navbar-collapse{
+
+#bs-example-navbar-collapse-1, .navbar-collapse {
 	border: none;
 }
 
@@ -137,9 +141,13 @@ span.icon-bar {
 }
 
 .nav-tabs > li > a:hover {
-	border: 1px solid transparent;
 	background-color: #f1ebf2;
 	border-radius: 5px;
+	border: none;
+}
+
+.nav-tabs > li > a {
+	border: none;
 }
 
 .nav > li > a {
@@ -186,7 +194,7 @@ span.icon-bar {
 		padding: 23px 0 29px 0;
 		margin-right: -25px;
 		transition: all .5s;
-		&:hover,{
+		&:hover, {
 			text-decoration: none;
 			background: #de4dac;
 		}
@@ -204,7 +212,6 @@ span.icon-bar {
 			text-transform: uppercase;
 		}
 
-
 	}
 }
 
@@ -216,24 +223,25 @@ span.icon-bar {
 		z-index: 1;
 
 	}
-	p,h3{
+	p, h3 {
 		margin-left: 36px;
 	}
-	li.active a{
+	li.active a {
 		text-decoration: none;
 		background: #de4dac;
 
 	}
-	ul,li{
+	ul, li {
 		list-style: none;
 	}
 }
+
 #myTabs2 {
 	margin-right: -20px;
-	ul,li{
+	ul, li {
 		list-style: none;
 	}
-	li.active a{
+	li.active a {
 		text-decoration: none;
 		background: #de4dac;
 	}
@@ -251,7 +259,7 @@ span.icon-bar {
 
 .facilities_text {
 	margin-top: 21px;
-	margin-bottom: 103px;
+	margin-bottom: 67px;
 }
 
 .tab-content {
@@ -272,10 +280,6 @@ span.icon-bar {
 	margin-top: 239px;
 	margin-bottom: 140px;
 
-	.copiright, .footer_menu, .fb-wrapper {
-		float: left;
-		margin-left: 166px;
-	}
 	.footer_menu {
 
 		ul {
@@ -288,11 +292,7 @@ span.icon-bar {
 		a {
 			text-decoration: none;
 			color: #c4c4c4;
-
 		}
-	}
-	.copiright {
-		margin-left: 0;
 	}
 	.social-icons {
 		margin-top: 23px;

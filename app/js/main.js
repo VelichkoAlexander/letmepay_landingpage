@@ -11,6 +11,7 @@
 
         },
         setUpListeners: function () {
+
             $('.facilities_text li').on('click', function(){
                 var $this=$(this);
                 $('.facilities_text li').removeClass('active');
@@ -36,7 +37,7 @@
             },{offset: '93%'});
             //animate
 
-            $(".section_title").animated("fadeInUp", "fadeOutDown");
+            $(".facilities .section_title,.header .section_title").animated("fadeInUp", "fadeOutDown");
 
             $('#myTabs,#myTabs2 a,#myTabs3 a').click(function (e) {
                 e.preventDefault();
