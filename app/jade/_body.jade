@@ -8,33 +8,32 @@ section.how_connect
 
 		.row
 			#myTabs
-				ul.nav.nav-tabs.center-block(role="tablist")
+				ul.nav.nav-tabs(role="tablist")
 					li.active(role="presentation")
-						a(href="#download" aria-controls="home" role="tab" data-toggle="tab") Скачайте приложение
+						a(href="#download" aria-controls="home" role="tab" data-toggle="tab") Скачай приложение
 					li(role="presentation")
 						a(href="#register" aria-controls="second" role="tab" data-toggle="tab") Зарегистрируйся
 					li(role="presentation")
 						a(href="#payment" aria-controls="second" role="tab" data-toggle="tab") Укажи способы оплаты
 					li(role="presentation")
 						a(href="#profit" aria-controls="second" role="tab" data-toggle="tab") Пользуйся!
-
 				// Tab panes
 				.tab-content
 					div#download.tab-pane.fade.in.active(role="tabpanel")
 						.container
 							.content_tab
-								.col-md-6
-									img.img.pull-right.animation_2(src="images/second_section/1.png" alt="Безопасная регистрация")
-								.col-md-6
+								.col-xs-12.col-md-6.col-sm-6
+									img.img.animation_2(src="images/second_section/1.png" alt="Безопасная регистрация")
+								.col-xs-12.col-md-6.col-sm-6
 									.how_connect_info.animation_3
 										h3 Безопасная регистрация
 										p Введи номер телефона. После этого тебе придёт SMS со специальным кодом. Придумай пароль.Теперь ты можешь пользоваться приложением! И другой текст о безопасности, в котором лучшесделать акцент на преимуществах, а не инструктировать пользователя.
 					div#register.tab-pane.fade(role="tabpanel")
 						.container
 							.content_tab
-								.col-md-6
-									img.img.pull-right.animation_2(src="images/second_section/2.png" alt="Зарегистрируйся")
-								.col-md-6
+								.col-xs-12.col-md-6.col-sm-6
+									img.img.animation_2(src="images/second_section/2.png" alt="Зарегистрируйся")
+								.col-xs-12.col-md-6.col-sm-6
 									.how_connect_info.animation_3
 										h3 Безопасная регистрация
 										p Введи номер телефона. После этого тебе придёт SMS со специальным кодом. Придумай пароль.Теперь ты можешь пользоваться приложением! И другой текст о безопасности, в котором лучшесделать акцент на преимуществах, а не инструктировать пользователя.
@@ -42,18 +41,18 @@ section.how_connect
 					div#payment.tab-pane.fade(role="tabpanel")
 						.container
 							.content_tab
-								.col-md-6
-									img.img.pull-right.animation_2(src="images/second_section/3.png" alt="Укажи способы оплаты")
-								.col-md-6
+								.col-xs-12.col-md-6.col-sm-6
+									img.img.animation_2(src="images/second_section/3.png" alt="Укажи способы оплаты")
+								.col-xs-12.col-md-6.col-sm-6
 									.how_connect_info.animation_3
 										h3 Безопасная регистрация
 										p Введи номер телефона. После этого тебе придёт SMS со специальным кодом. Придумай пароль.Теперь ты можешь пользоваться приложением! И другой текст о безопасности, в котором лучшесделать акцент на преимуществах, а не инструктировать пользователя.
 					div#profit.tab-pane.fade(role="tabpanel")
 						.container
 							.content_tab
-								.col-md-6
-									img.img.pull-right.animation_2(src="images/second_section/4.png" alt="Пользуйся!")
-								.col-md-6
+								.col-xs-12.col-md-6.col-sm-6
+									img.img.animation_2(src="images/second_section/4.png" alt="Пользуйся!")
+								.col-xs-12.col-md-6.col-sm-6
 									.how_connect_info.animation_3
 										h3 Безопасная регистрация
 										p Введи номер телефона. После этого тебе придёт SMS со специальным кодом. Придумай пароль.Теперь ты можешь пользоваться приложением! И другой текст о безопасности, в котором лучшесделать акцент на преимуществах, а не инструктировать пользователя.
@@ -63,8 +62,8 @@ section.facilities
 			.section_title
 				h2 Возможности
 		.row.facilities_content
-			.col-md-4.col-sm-6
-				#myTabs2.facilities_text.animation_2.pull-right
+			.col-md-4.col-sm-12.col-xs-12.clearfix
+				#myTabs2.facilities_text.animation_2
 					ul(role="tablist")
 						li.active(role="presentation")
 							a(href="#one" aria-controls="second" role="tab" data-toggle="tab" )
@@ -79,10 +78,10 @@ section.facilities
 								h3   Плати за услуги онлайн
 								p    Выбери сервис, за который хочешь  заплатить, в каталоге. Введи сумму для оплаты.Платеж совершен!
 
-			.col-md-4.col-sm-6
-				.tab-content
+			.hidden-xs.col-md-4#stiky_el
+				#skrol_image.tab-content(data-1528="margin-top:0px" data-2020="margin-top:420px")
 					div#one.tab-pane.active(role="tabpanel")
-						img.img_2.animation_1(src="images/third_section/3-1.png" alt="iphone")
+						img.img_2.animation_1(src="images/third_section/3-1.png" alt="iphone" )
 					div#two.tab-pane(role="tabpanel")
 						img.img_2.animation_1(src="images/third_section/3-2.png" alt="iphone")
 					div#three.tab-pane(role="tabpanel")
@@ -93,7 +92,7 @@ section.facilities
 						img.img_2.animation_1(src="images/third_section/3-5.png" alt="iphone")
 					div#six.tab-pane(role="tabpanel")
 						img.img_2.animation_1(src="images/third_section/3-6.png" alt="iphone")
-			.col-md-4.col-sm-6
+			.col-md-4.col-sm-12.clearfix.col-xs-12
 				#myTabs3.facilities_text.animation_3
 					ul(role="tablist")
 						li(role="presentation")

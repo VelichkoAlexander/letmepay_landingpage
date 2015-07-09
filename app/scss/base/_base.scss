@@ -85,10 +85,12 @@ span.icon-bar {
 	.left_side {
 		text-align: right;
 		margin-right: 52px;
+		float: right;
 	}
 	.right_side {
 		text-align: left;
 		margin-left: 52px;
+		float: left;
 	}
 	img {
 		display: block;
@@ -123,8 +125,8 @@ span.icon-bar {
 //tabs
 .nav-tabs {
 	border: none;
-	margin-top: 50px;
 	max-width: 950px;
+	margin: 50px auto 0;
 
 	a {
 		color: #050708;
@@ -160,11 +162,12 @@ span.icon-bar {
 	}
 	.img {
 		display: block;
-		margin-right: 40px
+		margin-right: 40px;
+		float: right;
 	}
 	.how_connect_info {
 		padding: 70px 0 0 12px;
-		width: 382px;
+		max-width: 382px;
 		box-sizing: content-box;
 
 	}
@@ -192,8 +195,9 @@ span.icon-bar {
 		display: block;
 		color: #ffffff;
 		padding: 23px 0 29px 0;
-		margin-right: -25px;
+
 		transition: all .5s;
+		text-decoration: none;
 		&:hover, {
 			text-decoration: none;
 			background: #de4dac;
@@ -222,6 +226,7 @@ span.icon-bar {
 		margin-left: -25px;
 		z-index: 1;
 
+
 	}
 	p, h3 {
 		margin-left: 36px;
@@ -237,7 +242,8 @@ span.icon-bar {
 }
 
 #myTabs2 {
-	margin-right: -20px;
+	margin-right: -25px;
+	float: right;
 	ul, li {
 		list-style: none;
 	}
@@ -268,8 +274,8 @@ span.icon-bar {
 		display: block;
 		margin: auto;
 		position: absolute;
-		left: 0;
-		right: 0;
+		//left: 0;
+		//right: 0;
 		z-index: 100;
 	}
 }
@@ -312,3 +318,4 @@ span.icon-bar {
 		}
 	}
 }
+
