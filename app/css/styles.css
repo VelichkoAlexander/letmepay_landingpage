@@ -164,16 +164,15 @@ body {
 
 body {
   -webkit-font-smoothing: antialiased;
-  min-width: 320px !important; }
+  min-width: 320px !important;
+  line-height: 1.7;
+  overflow-x: hidden; }
 
 body input:focus:required:invalid, body textarea:focus:required:invalid {
   color: red; }
 
 .hidden {
   display: none; }
-
-* {
-  outline: none; }
 
 .header {
   color: #ffffff;
@@ -321,10 +320,8 @@ span.icon-bar {
     .facilities a h3, .facilities a p {
       font-size: 16px;
       line-height: 24px;
-      margin: 0;
-      width: 340px;
-      margin-right: 38px;
-      margin-left: 20px; }
+      margin: 0 38px 0 20px;
+      width: 340px; }
     .facilities a h3 {
       text-transform: uppercase; }
 
@@ -413,6 +410,52 @@ span.icon-bar {
 
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
+@media only screen and (max-width: 480px) {
+  .header .logoplace {
+    margin-top: 5px; }
+  .logo {
+    margin-left: 10px; }
+  .appstore_toggle img {
+    display: block;
+    margin: 0 auto; }
+  .header .section_title {
+    margin: 25px 0 0 0; }
+  .section_title .small {
+    margin-bottom: 17px;
+    font-size: 17px; }
+  .section_title h2 {
+    font-size: 29px; }
+  .proposal .right_side, .proposal .left_side {
+    margin-left: 0 !important;
+    text-align: center !important; }
+  .proposal p {
+    max-width: 100% !important; }
+  .how_connect .section_title, .third_title {
+    margin-top: 25px; }
+  .nav-tabs > li {
+    display: block !important;
+    text-align: center; }
+  .third_title .section_title {
+    margin-bottom: 0; }
+  .facilities_content {
+    margin: 0; }
+  .facilities a h3, .facilities a p {
+    width: 100% !important;
+    margin: 0 !important; }
+  .facilities a {
+    padding: 0 0 20px 0; }
+    .facilities a:hover {
+      background: transparent; }
+  #myTabs3 a, #myTabs2 a, #myTabs2, #myTabs3 {
+    margin: 0 !important; }
+  #myTabs3 ul, #myTabs2 ul {
+    padding: 0; }
+  .wrapper-footer {
+    margin-top: 25px;
+    margin-bottom: 10px; }
+  .social-icons {
+    float: right; } }
+
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */

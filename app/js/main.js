@@ -6,6 +6,7 @@
 
         initialize: function () {
             this.setUpListeners();
+            this.niceScrolle();
             this.SkroLl();
         },
         setUpListeners: function () {
@@ -19,9 +20,9 @@
             $(".logo a[href*='#']").mPageScroll2id();
             //fix top menu
             $(window).bind('scroll', function () {
-                if ($(window).scrollTop() > 62) {
+                if ($(window).scrollTop() > 162) {
                     $('nav').addClass('navbar-fixed-top');
-                    $('#header .section_title').css("margin-top", "161px");
+                    //$('#header .section_title').css("margin-top", "161px");
                 } else {
                     $('nav').removeClass('navbar-fixed-top');
                 }
@@ -45,29 +46,6 @@
             $(".right .resume_item").animated("fadeInRight", "fadeOutDown");
 
 
-            //    $('#stiky_el').waypoint(function (direction) {
-            //        if (direction == 'down') {
-            //
-            //            $('#stiky_el').addClass('stiky');
-            //        }
-            //        else {
-            //            $('#stiky_el').removeClass('stiky');
-            //        }
-            //    }, {offset: '150px'});
-            //    $(".copiright").waypoint(function (direction) {
-            //        if (direction == 'down') {
-            //            $('#stiky_el').removeClass('stiky');
-            //
-            //        }
-            //        else {
-            //
-            //            $('#stiky_el').addClass('stiky').fadeIn('slow');
-            //        }
-            //    }, {offset: '75%'});
-            //    $(window).bind('scroll', function () {
-            //        console.log($(window).scrollTop());
-            //    });
-
 
         },
         SkroLl: function () {
@@ -83,8 +61,12 @@
                     var s = skrollr.init().destroy(); // skrollr.init() returns the singleton created above
                 }
             });
+        },
+        niceScrolle: function () {
+            $("body").niceScroll({
+                horizrailenabled: false
+            })
         }
-
 
     };
     app.initialize();

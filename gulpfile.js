@@ -3,25 +3,26 @@ var gulp = require('gulp'),
     rename = require("gulp-rename"),
     cache = require('gulp-cache'),
     notify = require('gulp-notify'),
-    concat= require('gulp-concat'),
-    uglify  = require('gulp-uglify'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),// Компиляция SCSS
     wiredep = require('wiredep').stream,
-    minifyCSS=require('gulp-minify-css'),
-    autoprefixer=require('gulp-autoprefixer'),
+    minifyCSS = require('gulp-minify-css'),
+    autoprefixer = require('gulp-autoprefixer'),
     concatCss = require('gulp-concat-css'),
     browserSync = require('browser-sync').create(),//лайв-релоад
-    reload = browserSync.reload, //упрощение обращения к релоаду
+    reload = browserSync.reload,//упрощение обращения к релоаду
+    plumber = require('gulp-plumber'),
     jade = require('gulp-jade'); // Компиляция Jade
 
 //===================================LIVERELOAD===================================
 
 // Static server
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
-                 baseDir: "./app"
-               }
+            baseDir: "./app"
+        }
     });
 });
 
@@ -32,6 +33,7 @@ gulp.task('browser-sync', function() {
 //Собираем Jade
 gulp.task('jade', function () {
     gulp.src(['app/jade/*.jade', '!app/jade/_*.jade'])	// Указываем какие файлы нужны
+        .pipe(plumber())
         .pipe(jade({									// Вызываем Jade
             pretty: true								// Делаем красиво и богато, пока что.
         }))
@@ -70,7 +72,7 @@ gulp.task('concatCss', function () {
 });
 
 //minify
-gulp.task('minify-css', function() {
+gulp.task('minify-css', function () {
     return gulp.src('./app/css/*.css')
         .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist'));
@@ -121,7 +123,7 @@ gulp.task('wiredep', function () {
         .pipe(wiredep({
             directory: 'app/components',
             exclude: 'app/components/jquery'           //Исключаем ненужную папку
-}))
+        }))
         .pipe(gulp.dest('app/jade/'))
         .pipe(notify("wiredep include done!"))
 });
@@ -164,3 +166,4 @@ gulp.task('build', function () {
     gulp.src('./app/js/libs/**/*/')
         .pipe(gulp.dest('out/js/libs'));
 });
+
