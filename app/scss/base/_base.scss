@@ -27,10 +27,16 @@
 
 .logo {
 	margin-left: 31px;
+	a{
+		display: block;
+
+	}
 }
 
 .appstore {
+	display: block;
 	margin-right: 31px;
+	float: right;
 	img {
 		margin-top: 3px;
 	}
@@ -310,5 +316,13 @@ span.icon-bar {
 
 		}
 	}
+}
+
+.hidden_text {
+	color: #050708;
+	font-size: 24px!important;
+	font-weight: 600;
+	margin-bottom: 27px!important;
+
 }
 

@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),//лайв-релоад
     reload = browserSync.reload,//упрощение обращения к релоаду
     plumber = require('gulp-plumber'),
+    notify = require("gulp-notify"),
     jade = require('gulp-jade'); // Компиляция Jade
 
 //===================================LIVERELOAD===================================
@@ -24,6 +25,7 @@ gulp.task('browser-sync', function () {
             baseDir: "./app"
         }
     });
+
 });
 
 //===================================END LIVERELOAD===================================
@@ -33,7 +35,7 @@ gulp.task('browser-sync', function () {
 //Собираем Jade
 gulp.task('jade', function () {
     gulp.src(['app/jade/*.jade', '!app/jade/_*.jade'])	// Указываем какие файлы нужны
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(jade({									// Вызываем Jade
             pretty: true								// Делаем красиво и богато, пока что.
         }))
@@ -81,6 +83,7 @@ gulp.task('minify-css', function () {
 //Собираем SCSS
 gulp.task('sass', function () {
     gulp.src('app/scss/*.scss')
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sass({
             errLogToConsole: true,						// показывать ошибки в консоле
             sync: true									// для обработки больших файлов
@@ -109,7 +112,7 @@ gulp.task('js', function () {
 gulp.task('minify-js', function () {
     gulp.src('./app/js/*.js')
         .pipe(uglify())
-        .pipe(concat('maine.js'))
+        //.pipe(concat('maine.js'))
         .pipe(gulp.dest('out/js'));
 });
 
@@ -138,6 +141,7 @@ gulp.task('watch', function () {
     gulp.watch('app/jade/*.jade', ['jade']);
     gulp.watch('app/scss/**/_*.scss', ['sass']);
     gulp.watch('bower.json', ['wiredep']);
+
 });
 
 //default

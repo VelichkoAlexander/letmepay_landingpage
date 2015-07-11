@@ -35,6 +35,50 @@
 		animation: none !important;
 	}
 
+	//.img_first_section {
+	//	position: relative;
+	//	img {
+	//		position: absolute;
+	//		bottom: 0;
+	//		right: -145px;
+	//	}
+	//}
+	.facilities {
+		background-image: none;
+		background-color: #6364b2;
+		#myTabs2 li.active a#myTabs3 li.active a {
+			text-decoration: none;
+			background: transparent;
+		}
+
+	}
+
+	.logo {
+		display: block;
+
+		img {
+			display: block;
+			margin: auto;
+		}
+	}
+
+	.appstore {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		img {
+			display: block;
+			margin: 7px auto 0;
+		}
+
+	}
+
+	.wrapper-footer {
+		color: #c4c4c4;
+		margin-top: 150px;
+		margin-bottom: 140px;
+	}
+
 }
 
 /* Extra Small Devices, Phones */
@@ -44,16 +88,33 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 480px) {
+	.navbar-fixed-top .logoplace {
+		padding: 3px !important;
+	}
+
 	// HEADER
 	.header .logoplace {
 		margin-top: 5px;
 	}
 	.logo {
-		margin-left: 10px;
-	}
-	.appstore_toggle img {
+		margin-left: 0;
 		display: block;
-		margin: 0 auto;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.img_first_section {
+		display: none;
+	}
+	.appstore {
+		display: block;
+		margin: 7px auto 0;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+		float: none;
 	}
 	.header .section_title {
 		margin: 25px 0 0 0;
@@ -94,7 +155,7 @@
 	}
 	.facilities a {
 		padding: 0 0 20px 0;
-		&:hover{
+		&:hover {
 			background: transparent;
 		}
 	}
@@ -105,15 +166,20 @@
 		padding: 0;
 	}
 	//FOOTER
-	.wrapper-footer{
+	.wrapper-footer {
 		margin-top: 25px;
 		margin-bottom: 10px;
 
 	}
 
-	.social-icons{
+	.social-icons {
 		float: right;
 
+	}
+
+	#myTabs2 li.active a, #myTabs3 li.active a {
+
+		background: transparent !important;
 	}
 }
 
@@ -290,7 +356,16 @@
 	}
 
 	#stiky_el {
-		transition: all .7s;
+		position: relative;
+	}
+
+	.fix {
+		position: fixed;
+		top: 0;
+		right: 24px;
+		margin-top: 85px;
+		z-index: 1000;
+
 	}
 
 }

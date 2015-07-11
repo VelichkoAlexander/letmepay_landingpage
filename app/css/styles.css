@@ -197,9 +197,13 @@ body input:focus:required:invalid, body textarea:focus:required:invalid {
 
 .logo {
   margin-left: 31px; }
+  .logo a {
+    display: block; }
 
 .appstore {
-  margin-right: 31px; }
+  display: block;
+  margin-right: 31px;
+  float: right; }
   .appstore img {
     margin-top: 3px; }
 
@@ -392,6 +396,12 @@ span.icon-bar {
       margin-left: 11px;
       background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABd1BMVEU/WKI7WZg8Wpk9W5hBYZEZJ9M6WJs/X5Q8Wpg9XJc+Wpk+XJY9WJs8XJYaboxLcaJLc6JLc6JJcqFVfKhZf6lVe6dKcqAVItk9W5g8Wpk8WZlKcaJLc6JJcqJJcaFJcqFLdKJMdaNIcqFFcKBJc6FGcKBFcJ9LdKNNdqRkiK9vkLVuj7RYfqlKc6JJc6JFb59HcaCbsszQ2+fR2+emutFDbp5Te6fQ2ub////+///Y4OpOdqReg6zG0+LN2OXP2uanu9JCbZ6Qqcb+/v5oi7E7aJp8mrvs8PU9aZukuNDe5e6/zt5ukLXk6vFZf6rw8/fZ4etNdqNKc6FBbZ2GosF3lrlqjLLi6fC9zN3z9fhnirBEb59GcaDL1+Tt8fb3+fv8/f2DoL9BbJ1kh6/6+/x0lLdAa5yascv9/v7v8/dzk7dKdKKqvtP5+/x1lLi3yNry9fiHosHZ4uz7/P3Bz9/Azt5LdaNpi7J1lbhoirF5mLp2lblihq6zhZJQAAAAGHRSTlMckp2dkh6en6SkpKSeoB6Tnp2dnp6ekyAUy5vfAAAAAWJLR0Q4oAel1gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAR9JREFUKM9jYGBkwgDMLKwMbBKSmECKnYFDWgYZyMrJy8vISHMyMCkoYgIFJgYmGSziMkSIKykrq6CKKymrqqlraGpp6+gq6umrKRtAxNUMjYxNTM3MLSytrFVtbO3sHVTB4o5OFhbOLq5uFhbuZh4mFhYWno5gcV1FLwsLb1cfCwtfGT9/C4uAwCCI+cEhQA2hYRYW4QYRFhaRUdFQe9VjYi0s4owtLOLtLSwSEpPg7tRPjreAgZTUNIT7k9IhghlAnJnlCBfPjs4BCefm5QPJgjBVuH+zowuLii18lZRKgBKlpohwKDNVLK+oVFBSyKqqrtFFDp/smGgDYAjrR0cr4QtPLqzi3Aw8WOOLl4GPX0AQCoSERUREhYAMATFxAHTvU0FZ8JbIAAAAAElFTkSuQmCC") center center; }
 
+.hidden_text {
+  color: #050708;
+  font-size: 24px !important;
+  font-weight: 600;
+  margin-bottom: 27px !important; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
@@ -406,18 +416,52 @@ span.icon-bar {
     transform: none !important;
     /*CSS animations*/
     -webkit-animation: none !important;
-    animation: none !important; } }
+    animation: none !important; }
+  .facilities {
+    background-image: none;
+    background-color: #6364b2; }
+    .facilities #myTabs2 li.active a#myTabs3 li.active a {
+      text-decoration: none;
+      background: transparent; }
+  .logo {
+    display: block; }
+    .logo img {
+      display: block;
+      margin: auto; }
+  .appstore {
+    float: none;
+    display: block;
+    margin: 0 auto; }
+    .appstore img {
+      display: block;
+      margin: 7px auto 0; }
+  .wrapper-footer {
+    color: #c4c4c4;
+    margin-top: 150px;
+    margin-bottom: 140px; } }
 
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 480px) {
+  .navbar-fixed-top .logoplace {
+    padding: 3px !important; }
   .header .logoplace {
     margin-top: 5px; }
   .logo {
-    margin-left: 10px; }
-  .appstore_toggle img {
+    margin-left: 0;
+    display: block; }
+    .logo img {
+      display: block;
+      margin: 0 auto; }
+  .img_first_section {
+    display: none; }
+  .appstore {
     display: block;
-    margin: 0 auto; }
+    margin: 7px auto 0;
+    float: none; }
+    .appstore img {
+      display: block;
+      margin: 0 auto; }
   .header .section_title {
     margin: 25px 0 0 0; }
   .section_title .small {
@@ -454,7 +498,9 @@ span.icon-bar {
     margin-top: 25px;
     margin-bottom: 10px; }
   .social-icons {
-    float: right; } }
+    float: right; }
+  #myTabs2 li.active a, #myTabs3 li.active a {
+    background: transparent !important; } }
 
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
@@ -556,4 +602,10 @@ span.icon-bar {
     #myTabs2 ul, #myTabs2 li {
       list-style: none; }
   #stiky_el {
-    transition: all .7s; } }
+    position: relative; }
+  .fix {
+    position: fixed;
+    top: 0;
+    right: 24px;
+    margin-top: 85px;
+    z-index: 1000; } }
