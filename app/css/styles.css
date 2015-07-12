@@ -175,6 +175,7 @@ body input:focus:required:invalid, body textarea:focus:required:invalid {
   display: none; }
 
 .header {
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   color: #ffffff;
   background: url("../images/first_section/bg.jpg");
   background-size: cover; }
@@ -188,7 +189,8 @@ body input:focus:required:invalid, body textarea:focus:required:invalid {
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
 
 .navbar-fixed-top {
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.5s ease-in-out 0s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
   background: #5e5fb4; }
   .navbar-fixed-top .logoplace {
     margin-top: 0;
@@ -405,6 +407,14 @@ span.icon-bar {
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 650px) {
+  img.section_img {
+    position: absolute;
+    right: -161px;
+    bottom: 0; }
+  .header {
+    overflow-x: hidden; } }
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   /*Disable Animation on Mobile Devices*/
@@ -418,8 +428,7 @@ span.icon-bar {
     -webkit-animation: none !important;
     animation: none !important; }
   .facilities {
-    background-image: none;
-    background-color: #6364b2; }
+    background: #6364b2 none; }
     .facilities #myTabs2 li.active a#myTabs3 li.active a {
       text-decoration: none;
       background: transparent; }

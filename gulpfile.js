@@ -110,10 +110,10 @@ gulp.task('js', function () {
 });
 
 gulp.task('minify-js', function () {
-    gulp.src('./app/js/*.js')
+    gulp.src('./app/js/libs/**.js')
         .pipe(uglify())
-        //.pipe(concat('maine.js'))
-        .pipe(gulp.dest('out/js'));
+        .pipe(concat('libs.js'))
+        .pipe(gulp.dest('out/js/lib'));
 });
 
 //===================================END JS===================================

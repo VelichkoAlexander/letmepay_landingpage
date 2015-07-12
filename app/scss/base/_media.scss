@@ -10,6 +10,20 @@
 
 }
 
+@media only screen and (max-width: 650px){
+	img.section_img {
+		position: absolute;
+		right: -161px;
+		bottom: 0;
+	}
+	.header{
+		overflow-x: hidden;
+	}
+
+
+
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
 
@@ -34,23 +48,13 @@
 		-ms-animation: none !important;
 		animation: none !important;
 	}
-
-	//.img_first_section {
-	//	position: relative;
-	//	img {
-	//		position: absolute;
-	//		bottom: 0;
-	//		right: -145px;
-	//	}
-	//}
 	.facilities {
-		background-image: none;
-		background-color: #6364b2;
+
+		background: #6364b2 none;
 		#myTabs2 li.active a#myTabs3 li.active a {
 			text-decoration: none;
 			background: transparent;
 		}
-
 	}
 
 	.logo {

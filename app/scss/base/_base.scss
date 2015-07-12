@@ -1,4 +1,5 @@
 .header {
+	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 	color: #ffffff;
 	background: url("../images/first_section/bg.jpg");
 	background-size: cover;
@@ -16,7 +17,9 @@
 }
 
 .navbar-fixed-top {
-	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	//transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all 0.5s ease-in-out 0s;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 	background: #5e5fb4;
 	.logoplace {
 		margin-top: 0;
@@ -27,7 +30,7 @@
 
 .logo {
 	margin-left: 31px;
-	a{
+	a {
 		display: block;
 
 	}
@@ -225,7 +228,6 @@ span.icon-bar {
 		margin-left: -25px;
 		z-index: 1;
 
-
 	}
 	p, h3 {
 		margin-left: 36px;
@@ -320,9 +322,9 @@ span.icon-bar {
 
 .hidden_text {
 	color: #050708;
-	font-size: 24px!important;
+	font-size: 24px !important;
 	font-weight: 600;
-	margin-bottom: 27px!important;
+	margin-bottom: 27px !important;
 
 }
 
