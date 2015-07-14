@@ -1,8 +1,16 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-
+@media only screen and (max-width: 960px) {
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -10,17 +18,15 @@
 
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 650px) {
 	img.section_img {
 		position: absolute;
 		right: -161px;
 		bottom: 0;
 	}
-	.header{
+	.header {
 		overflow-x: hidden;
 	}
-
-
 
 }
 
@@ -121,7 +127,7 @@
 		float: none;
 	}
 	.header .section_title {
-		margin: 25px 0 0 0;
+		margin: 160px 0 0 0;
 	}
 	.section_title .small {
 		margin-bottom: 17px;
@@ -246,7 +252,10 @@
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 910px) {
+	.tab-pane {
+		overflow-x: hidden;
+	}
 
 }
 
@@ -256,6 +265,10 @@
 }
 
 @media only screen and (min-width: 1440px) {
+	+
+	.tab-content .img {
+		margin-right: 35px;
+	}
 	.copiright {
 		margin-left: 113px !important;
 
@@ -361,6 +374,7 @@
 
 	#stiky_el {
 		position: relative;
+		transition: all 0.3s ease-in-out;
 	}
 
 	.fix {
@@ -369,7 +383,6 @@
 		right: 24px;
 		margin-top: 85px;
 		z-index: 1000;
-
 	}
 
 }

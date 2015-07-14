@@ -1,27 +1,35 @@
+
 .header {
 	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 	color: #ffffff;
 	background: url("../images/first_section/bg.jpg");
 	background-size: cover;
+	nav{
+		//transition: all 0.5s ease-in-out;
+		position: fixed;
+
+	}
 	h1 {
 		padding: 0;
 		margin: 0;
 	}
 	.logoplace {
 		margin-top: 52px;
+		transition: all 0.5s ease-in-out;
 	}
 	.section_title {
-		margin-top: 109px;
+		margin-top: 109+124px;
 		transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 	}
 }
 
-.navbar-fixed-top {
+.ftop {
 	//transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-	transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 	background: #5e5fb4;
 	.logoplace {
+		transition: all 0.5s ease-in-out;
 		margin-top: 0;
 		margin-bottom: 0;
 		padding: 10px;
@@ -327,4 +335,12 @@ span.icon-bar {
 	margin-bottom: 27px !important;
 
 }
+.tab-content .img {
+	margin-right: 30px;
+}
+
+//#download, .right_side,{
+//
+//	overflow-x: hidden;
+//}
 

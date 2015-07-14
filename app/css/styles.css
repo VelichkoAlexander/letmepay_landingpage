@@ -179,20 +179,24 @@ body input:focus:required:invalid, body textarea:focus:required:invalid {
   color: #ffffff;
   background: url("../images/first_section/bg.jpg");
   background-size: cover; }
+  .header nav {
+    position: fixed; }
   .header h1 {
     padding: 0;
     margin: 0; }
   .header .logoplace {
-    margin-top: 52px; }
+    margin-top: 52px;
+    transition: all 0.5s ease-in-out; }
   .header .section_title {
-    margin-top: 109px;
+    margin-top: 233px;
     transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
 
-.navbar-fixed-top {
-  transition: all 0.5s ease-in-out 0s;
+.ftop {
+  transition: all 0.5s ease-in-out;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
   background: #5e5fb4; }
-  .navbar-fixed-top .logoplace {
+  .ftop .logoplace {
+    transition: all 0.5s ease-in-out;
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px; }
@@ -404,8 +408,18 @@ span.icon-bar {
   font-weight: 600;
   margin-bottom: 27px !important; }
 
+.tab-content .img {
+  margin-right: 30px; }
+
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 960px) {
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    animation: none !important; } }
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 650px) {
   img.section_img {
@@ -472,7 +486,7 @@ span.icon-bar {
       display: block;
       margin: 0 auto; }
   .header .section_title {
-    margin: 25px 0 0 0; }
+    margin: 160px 0 0 0; }
   .section_title .small {
     margin-bottom: 17px;
     font-size: 17px; }
@@ -541,8 +555,14 @@ span.icon-bar {
       list-style: none; } }
 
 /* Medium Devices, Desktops */
+@media only screen and (max-width: 910px) {
+  .tab-pane {
+    overflow-x: hidden; } }
+
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1440px) {
+  + .tab-content .img {
+    margin-right: 35px; }
   .copiright {
     margin-left: 113px !important; }
   .img_2 {
@@ -611,7 +631,8 @@ span.icon-bar {
     #myTabs2 ul, #myTabs2 li {
       list-style: none; }
   #stiky_el {
-    position: relative; }
+    position: relative;
+    transition: all 0.3s ease-in-out; }
   .fix {
     position: fixed;
     top: 0;
