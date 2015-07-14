@@ -9,6 +9,27 @@
             this.SkroLl();
         },
         setUpListeners: function () {
+            //
+            $.fn.animated = function(inEffect, outEffect) {
+                $(this).css("opacity", "0").addClass("animated").waypoint(function(dir) {
+                    if (dir === "down") {
+                        $(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
+                    } else {
+                        $(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
+                    }
+                }, {
+                    offset: "85%"
+                }).waypoint(function(dir) {
+                    if (dir === "down") {
+                        $(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
+                    } else {
+                        $(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
+                    }
+                }, {
+                    offset: -"90%"
+                });
+            };
+            //
             $('.facilities_text li').on('click', function () {
                 var $this = $(this);
                 $('.facilities_text li').removeClass('active');
@@ -32,14 +53,15 @@
                 e.preventDefault();
                 $(this).tab('show')
             });
-            $(".section_img").animated("fadeInUp", "fadeOutDown");
+            $(".section_img").animated("fadeIn", "fadeOut");
+
 
             $(".animation_1").animated("flipInY", "fadeOutDown");
             $(".animation_2").animated("fadeInLeft", "fadeOutDown");
             $(".animation_3").animated("fadeInRight", "fadeOutDown");
 
-            $(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
-            $(".right .resume_item").animated("fadeInRight", "fadeOutDown");
+            //$(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
+            //$(".right .resume_item").animated("fadeInRight", "fadeOutDown");
 
             $('#stiky_el').waypoint(function (direction) {
                 if (direction == 'down') {
