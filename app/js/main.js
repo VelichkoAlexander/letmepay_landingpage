@@ -5,7 +5,6 @@
 
         initialize: function () {
             this.setUpListeners();
-            //this.niceScrolle();
             this.SkroLl();
         },
         setUpListeners: function () {
@@ -28,7 +27,7 @@
                         $(this).removeClass(outEffect).addClass(inEffect).css("opacity", "1");
                     }
                 }, {
-                    offset: -"90%"
+                    offset: -"100%"
                 });
             };
             //
@@ -37,12 +36,11 @@
                 $('.facilities_text li').removeClass('active');
                 $this.addClass('active');
             });
-            $(".logoplace a[href*='#']").mPageScroll2id();
+            //$(".logoplace a[href*='#']").mPageScroll2id();
             //fix top menu
             $(window).bind('scroll', function () {
                 if ($(window).scrollTop() > 70) {
                     $('nav').addClass('ftop');
-                    //$('#header .section_title').css("margin-top", "62px");
                 } else {
                     $('nav').removeClass('ftop');
                 }
@@ -62,8 +60,6 @@
             $(".animation_2").animated("fadeInLeft", "fadeOutDown");
             $(".animation_3").animated("fadeInRight", "fadeOutDown")
 
-            //$(".left .resume_item").animated("fadeInLeft", "fadeOutDown");
-            //$(".right .resume_item").animated("fadeInRight", "fadeOutDown");
 
             $('#stiky_el').waypoint(function (direction) {
                 if (direction == 'down') {
@@ -90,13 +86,10 @@
                     iphoneClass.addClass('tab-pane fade');
                 }
             });
-        },
-        niceScrolle: function () {
-            $("body").niceScroll({
-                horizrailenabled: false
-            })
-
         }
+
+
+
 
     };
     app.initialize();

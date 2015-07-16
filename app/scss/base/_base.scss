@@ -1,13 +1,16 @@
 
 .header {
-	transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 	color: #ffffff;
 	background: url("../images/first_section/bg.jpg");
 	background-size: cover;
-	nav{
-		//transition: all 0.5s ease-in-out;
-		position: fixed;
 
+	nav {
+
+		position: fixed;
+		z-index: 1000;
+	}
+	.navbar-fixed-top {
+		-webkit-transform: perspective(0px) translate3D(0,0,1000px);
 	}
 	h1 {
 		padding: 0;
@@ -15,21 +18,18 @@
 	}
 	.logoplace {
 		margin-top: 52px;
-		transition: all 0.5s ease-in-out;
 	}
 	.section_title {
 		margin-top: 109+124px;
-		transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
 	}
 }
 
 .ftop {
-	//transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-	transition: all 0.5s ease-in-out;
+
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 	background: #5e5fb4;
 	.logoplace {
-		transition: all 0.5s ease-in-out;
 		margin-top: 0;
 		margin-bottom: 0;
 		padding: 10px;
@@ -42,11 +42,15 @@
 		display: block;
 
 	}
+	img{
+		width: 228px;
+		height: 62px;
+	}
 }
 
 .appstore {
 	display: block;
-	margin-right: 31px;
+	margin-left: 31px;
 	float: right;
 	img {
 		margin-top: 3px;
@@ -335,12 +339,8 @@ span.icon-bar {
 	margin-bottom: 27px !important;
 
 }
+
 .tab-content .img {
 	margin-right: 30px;
 }
-
-//#download, .right_side,{
-//
-//	overflow-x: hidden;
-//}
 

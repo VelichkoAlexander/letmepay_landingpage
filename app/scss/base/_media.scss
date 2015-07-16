@@ -1,7 +1,7 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1115px) {
 	/*Disable Animation on Mobile Devices*/
 	.animated {
 		/*CSS animations*/
@@ -12,6 +12,8 @@
 		animation: none !important;
 	}
 }
+
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -88,7 +90,6 @@
 		margin-top: 150px;
 		margin-bottom: 140px;
 	}
-
 }
 
 /* Extra Small Devices, Phones */

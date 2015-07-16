@@ -175,28 +175,26 @@ body input:focus:required:invalid, body textarea:focus:required:invalid {
   display: none; }
 
 .header {
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
   color: #ffffff;
   background: url("../images/first_section/bg.jpg");
   background-size: cover; }
   .header nav {
-    position: fixed; }
+    position: fixed;
+    z-index: 1000; }
+  .header .navbar-fixed-top {
+    -webkit-transform: perspective(0px) translate3D(0, 0, 1000px); }
   .header h1 {
     padding: 0;
     margin: 0; }
   .header .logoplace {
-    margin-top: 52px;
-    transition: all 0.5s ease-in-out; }
+    margin-top: 52px; }
   .header .section_title {
-    margin-top: 233px;
-    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); }
+    margin-top: 233px; }
 
 .ftop {
-  transition: all 0.5s ease-in-out;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
   background: #5e5fb4; }
   .ftop .logoplace {
-    transition: all 0.5s ease-in-out;
     margin-top: 0;
     margin-bottom: 0;
     padding: 10px; }
@@ -205,10 +203,13 @@ body input:focus:required:invalid, body textarea:focus:required:invalid {
   margin-left: 31px; }
   .logo a {
     display: block; }
+  .logo img {
+    width: 228px;
+    height: 62px; }
 
 .appstore {
   display: block;
-  margin-right: 31px;
+  margin-left: 31px;
   float: right; }
   .appstore img {
     margin-top: 3px; }
@@ -413,7 +414,7 @@ span.icon-bar {
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1115px) {
   /*Disable Animation on Mobile Devices*/
   .animated {
     /*CSS animations*/

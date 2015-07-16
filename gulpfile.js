@@ -2,18 +2,17 @@
 var gulp = require('gulp'),
     rename = require("gulp-rename"),
     cache = require('gulp-cache'),
-    notify = require('gulp-notify'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),// Компиляция SCSS
     wiredep = require('wiredep').stream,
     minifyCSS = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer'),
     concatCss = require('gulp-concat-css'),
     browserSync = require('browser-sync').create(),//лайв-релоад
     reload = browserSync.reload,//упрощение обращения к релоаду
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
+    autoprefixer = require('gulp-autoprefixer'),
     jade = require('gulp-jade'); // Компиляция Jade
 
 //===================================LIVERELOAD===================================
@@ -58,8 +57,11 @@ gulp.task('html', function () {
 //css
 
 gulp.task('css', function () {
-    gulp.src('src/assets/styles/main.css')
-        .pipe(rename('style.css'))
+    gulp.src('app/css/styles.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: true
+            }))
         .pipe(gulp.dest('built/css/'))
         .pipe(notify("Css ready!"))
         .pipe(reload({stream: true}));
@@ -88,9 +90,9 @@ gulp.task('sass', function () {
             errLogToConsole: true,						// показывать ошибки в консоле
             sync: true									// для обработки больших файлов
         }))
-//.pipe(minifyCSS())
+        //.pipe(minifyCSS())
         .pipe(autoprefixer({
-            browsers: ['last 2 versions', 'Firefox ESR', 'Opera 12.1'],
+            browsers: ['last 2 versions'],
             cascade: true
         }))
         .pipe(gulp.dest('app/css/'))					// Директория куда скидываются готовые файлы
@@ -113,7 +115,7 @@ gulp.task('minify-js', function () {
     gulp.src('./app/js/libs/**.js')
         .pipe(uglify())
         .pipe(concat('libs.js'))
-        .pipe(gulp.dest('out/js/lib'));
+        .pipe(gulp.dest('out/js/libs'));
 });
 
 //===================================END JS===================================
@@ -135,7 +137,7 @@ gulp.task('wiredep', function () {
 
 //watcher
 gulp.task('watch', function () {
-    gulp.watch('app/css/style.css', ['css']);
+    //gulp.watch('app/css/styles.css', ['css']);
     gulp.watch('app/js/*.js', ['js']);
     //gulp.watch('app/*.html', ['html']);
     gulp.watch('app/jade/*.jade', ['jade']);
